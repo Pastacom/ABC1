@@ -202,7 +202,7 @@ main:	# Метка для главной функции программы.
 	cmp	DWORD PTR -4[rbp], eax # Сравнить rbp[-4] и eax.
 	jl	.L15	# Если rbp[-4] меньше eax, то переходим к метке .L15.
 	mov	edx, DWORD PTR -80020[rbp]	# edx := rbp[-80020], то есть в edx кладется значение `length`.
-	lea	rcx, -80016[rbp]	# rcx := rbp[-80016], записываем в rax указатель на начало массива `output[]`.
+	lea	rcx, -80016[rbp]	# rcx := rbp[-80016], записываем в rcx указатель на начало массива `output[]`.
 	lea	rax, -40016[rbp]	# rax := rbp[-40016], записываем в rax указатель на начало массива `input[]`.
 	mov	rsi, rcx	# rsi := rcx.
 	mov	rdi, rax	# rdi := rax.
